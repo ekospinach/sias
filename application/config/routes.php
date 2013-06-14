@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "siswa";
+$route['default_controller'] = "loguser";
 $route['404_override'] = '';
 
 

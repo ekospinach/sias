@@ -1,30 +1,51 @@
 <?php $this->load->view('header_view');?>
                 <script type="text/javascript">
 //                    $(document).ready(function() {
-//                        $("input[name='checkAll']").click(function() {
-//                            var checked = $("input[name='checkAll']").attr("checked");
-//                            alert(checked);
-//                            //$("input[name='pilih[]']").attr("selected",checked);
-//                            $("#pilih[]").attr("checked",checked);
+//                        $("input[name='pilih[]']").change(function() {
+//                            alert(document.getElementsById('checkAll').checked);
+//                        });
+//                        $("#checkAll").change(function() {
+//                            alert($(this).attr('checked').val());
 //                        });
 //                    });
-    function checkedAll () {
-        var inputs = document.getElementsByName('pilih[]');
-        var check = document.getElementById('checkAll').checked;
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].type === 'checkbox') {
-                inputs[i].checked = check;
-                //alert(check);
-            }
-        }
-    }
+                    function hapusdiv(){
+                        var inputs = document.getElementsByName('pilih[]');
+                        var hapusen = document.getElementById('hapus');
+                        var tambaen = document.getElementById('tambah');
+                        var whut = false;
+                        for (var i = 0; i < inputs.length; i++) {
+                            if (inputs[i].type === 'checkbox') {
+                                whut=whut||inputs[i].checked;
+                            }
+                        }
+                        if(whut){
+                            hapusen.setAttribute('style','display:block;');
+                            tambaen.setAttribute('style','display:none;');
+                        }else{
+                            hapusen.setAttribute('style','display:none;');
+                            tambaen.setAttribute('style','display:block;');
+                        }
+                        //alert(whut);
+                    }
+                    function checkedAll () {
+                        var inputs = document.getElementsByName('pilih[]');
+                        var check = document.getElementById('checkAll').checked;
+                        for (var i = 0; i < inputs.length; i++) {
+                            if (inputs[i].type === 'checkbox') {
+                                //alert(inputs[i].checked);
+                                inputs[i].checked = check;
+                            }
+                        }
+                        hapusdiv();
+                    }
                 </script>
                 <div id="isipanel">
                     <div id="isititle">
                         <div>Siswa</div>
-                        <!--<div class="hapus">hapus siswa</div>-->
                     </div>
                     <div id="tambah" onclick="location.href='<?=base_url('siswa/tambah')?>';">+ Tambah Siswa</div>
+                    <?=form_open('','onsubmit="return confirm(\'Are you sure?\')"')?>
+                    <input type="submit" value="- Hapus Siswa" name="hapus" id="hapus" class="hapus">
                     <div id="isi">
                         <div id="list">
                             <?php
@@ -54,7 +75,7 @@
                                     <table>
                                         <tr>
                                             <td width="37" align="center">
-                                                <input type="checkbox" name="pilih[]" id="pilih[]" class="checksiswa" value="<?=$baris->id?>">
+                                                <input type="checkbox" onchange="hapusdiv()" name="pilih[]" id="pilih[]" class="checksiswa" value="<?=$baris->id?>">
                                             </td>
                                             <td width="130" align="center" >
                                                 <?=$baris->nis?>
@@ -83,5 +104,7 @@
                             ?>
                         </div>
                     </div>
+                    <?=form_close()?>
+
                 </div>    
 <?php $this->load->view('footer_view');?>

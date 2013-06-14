@@ -4,8 +4,10 @@
     <head>
         <title>SIAS DASHBOARD<?= isset($title) ? ' - ' . $title : '' ?></title>
         <link rel="stylesheet" type="text/css" href="<?= base_url('asset/style.css') ?>">
+        <!--<link rel="stylesheet" type="text/css" href="<?//= base_url('asset/jquery-ui.css') ?>">-->
         <script type='text/javascript' src="<?= base_url('asset/js/sias.js') ?>"></script>
-        <script type="text/javascript" src="<?= base_url('asset/js/jquery-1.10.1.min.js') ?>"></script>
+        <script type="text/javascript" src="<?= base_url('asset/js/jquery_min.js') ?>"></script>
+        <script type="text/javascript" src="<?= base_url('asset/js/jquery-ui_min.js') ?>"></script>
         <script type="text/javascript">
             $(window).load(function() {
                 $("#loading").fadeOut("slow");
@@ -51,12 +53,14 @@
                             </div>
                         </td>
                         <td width=30%>
+                            <?=form_open('','id="cari"')?>
                             <div id="searchbar">
                                 <span>
-                                    <img class="imsearch" src="<?= base_url('asset/images/searchicon.png') ?>">
+                                    <img class="imsearch" onclick="document.getElementById('cari').submit();" src="<?= base_url('asset/images/searchicon.png') ?>">
                                 </span>
-                                <input type="text" placeholder="cari">
+                                <input type="text" placeholder="cari" name="cari">
                             </div>
+                            <?=form_close()?>
                         </td>
                     </tr>
                 </table>
