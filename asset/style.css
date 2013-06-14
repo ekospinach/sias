@@ -1,0 +1,804 @@
+/*============================================================================*/
+/*====================  BUAT LOADING, OJO D UTEK-UTEK=========================*/
+/*============================================================================*/
+
+#loading {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #f0f0ff;
+    opacity: 0.9;
+}
+
+#escapingBallG{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.escapingBallG1{
+    background-color:#4c76ff;
+    position:absolute;
+    top:-50px;
+    left:0px;
+    width:100px;
+    height:100px;
+    /*umum*/
+    border-radius:50px;
+    animation-name:bounce_escapingBallG1;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    transform:scale(0.5, 1);
+    /*mozilla*/
+    -moz-border-radius:50px;
+    -moz-animation-name:bounce_escapingBallG1;
+    -moz-animation-duration:1s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    -moz-animation-delay:0s;
+    -moz-transform:scale(0.5, 1);
+    /*chrome*/
+    -webkit-border-radius:50px;
+    -webkit-animation-name:bounce_escapingBallG1;
+    -webkit-animation-duration:1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-transform:scale(0.5, 1);
+    /*IE*/
+    -ms-border-radius:50px;
+    -ms-animation-name:bounce_escapingBallG1;
+    -ms-animation-duration:1s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-timing-function:linear;
+    -ms-animation-delay:0s;
+    -ms-transform:scale(0.5, 1);
+    /*Opera*/
+    -o-border-radius:50px;
+    -o-animation-name:bounce_escapingBallG1;
+    -o-animation-duration:1s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-timing-function:linear;
+    -o-animation-delay:0s;
+    -o-transform:scale(0.5, 1);
+}
+
+.escapingBallG2{
+    background-color:#4c76ff;
+    position:absolute;
+    top:-50px;
+    left:0px;
+    width:100px;
+    height:100px;
+    /*umum*/
+    border-radius:50px;
+    animation-name:bounce_escapingBallG2;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    transform:scale(0.5, 1);
+    /*mozilla*/
+    -moz-border-radius:50px;
+    -moz-animation-name:bounce_escapingBallG2;
+    -moz-animation-duration:1s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    -moz-animation-delay:0s;
+    -moz-transform:scale(0.5, 1);
+    /*chrome*/
+    -webkit-border-radius:50px;
+    -webkit-animation-name:bounce_escapingBallG2;
+    -webkit-animation-duration:1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-transform:scale(0.5, 1);
+    /*IE*/
+    -ms-border-radius:50px;
+    -ms-animation-name:bounce_escapingBallG2;
+    -ms-animation-duration:1s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-timing-function:linear;
+    -ms-animation-delay:0s;
+    -ms-transform:scale(0.5, 1);
+    /*Opera*/
+    -o-border-radius:50px;
+    -o-animation-name:bounce_escapingBallG2;
+    -o-animation-duration:1s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-timing-function:linear;
+    -o-animation-delay:0s;
+    -o-transform:scale(0.5, 1);
+}
+
+/*umum*/
+@keyframes bounce_escapingBallG1{
+    0%      {left:-50px;   transform:scale(0.25,   1.25);}
+    10%     {left:-100px;  transform:scale(1,      0.5);}
+    20%     {left:-180px;  transform:scale(0.5,    1);}
+    30%     {left:-220px;  transform:scale(1,      0.5);}
+    40%     {left:-240px;  transform:scale(0.7,    0.8);}
+    50%     {left:-250px;  transform:scale(0.6,    0.9);}
+    60%     {left:-240px;  transform:scale(0.75,   0.75);}
+    70%     {left:-220px;  transform:scale(0.75,   0.75);}
+    80%     {left:-180px;  transform:scale(0.75,   0.75);}
+    90%     {left:-100px;  transform:scale(0.75,   0.75);}
+    100%    {left:-50px;   transform:scale(0.25,   1.25);}
+}
+@keyframes bounce_escapingBallG2{
+    0%      {left:-50px;   transform:scale(0.25,   1.25);}
+    10%     {left:0px;     transform:scale(1,      0.5);}
+    20%     {left:80px;    transform:scale(0.5,    1);}
+    30%     {left:120px;   transform:scale(1,      0.5);}
+    40%     {left:140px;   transform:scale(0.7,    0.8);}
+    50%     {left:150px;   transform:scale(0.6,    0.9);}
+    60%     {left:140px;   transform:scale(0.75,   0.75);}
+    70%     {left:120px;   transform:scale(0.75,   0.75);}
+    80%     {left:80px;    transform:scale(0.75,   0.75);}
+    90%     {left:0px;     transform:scale(0.75,   0.75);}
+    100%    {left:-50px;   transform:scale(0.25,   1.25);}
+}
+
+/*============================================================================*/
+/*====================  BUAT LOADING, OJO D UTEK-UTEK=========================*/
+/*============================================================================*/
+
+@font-face{
+    font-family: 'Segoe';
+    src: url('font/segoeui.ttf');
+}
+
+@font-face{
+    font-family: 'SegoeBold';
+    src: url('font/segoeuib.ttf');
+}
+
+@font-face{
+    font-family: 'SegoeLight';
+    src: url('font/segoeuil.ttf');
+}
+
+@font-face{
+    font-family: 'SegoeSB';
+    src: url('font/seguisb.ttf');
+}
+
+
+#light{
+    font-family: 'SegoeLight';
+    font-size: 15pt;
+    text-transform: uppercase;    
+    color: #4c76ff;
+}
+
+#bold{
+    font-family: 'SegoeSB';
+    font-size: 15pt;
+    text-transform: uppercase;
+    color: #4c76ff;
+}
+
+body{
+    margin: 0;
+    background-color: #f9f6fc;
+    font-family: 'Segoe';
+    font-size: 10pt;
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a.blue{
+    text-decoration: none;
+    color: #4c76ff;
+}
+
+a.blue:hover{
+    text-decoration: underline;
+}
+
+a.white{
+    text-decoration: none;
+    color: white;
+}
+
+a.white:hover{
+    text-decoration: underline;
+}
+
+a.detail{
+    text-decoration: underline;
+    color: black;
+    font-family: 'SegoeSB';
+}
+
+#wrapper{
+    width: 960px;
+    height: 100%;
+    margin: auto;
+}
+
+#header{
+    width: auto;
+    height: 38px;
+    background-color: #4c76ff;
+    padding: 10px;
+}
+
+#blue{
+    width: auto;
+    height: 38px;
+    background-color: #4c76ff;
+    padding: 10px;
+    position: relative;
+
+}
+
+#logo{
+    margin-left: 13%;
+    float: left;
+    height: 100%;
+    padding: 5px;
+}
+
+#user{
+    margin-right: 13%;
+    float: right;
+    padding: 5px;
+    height: 100%;
+    text-align: right;
+}
+
+#sitemap{
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#detailuser{
+    font-family: 'Segoe';
+    color: white;
+    float: left;
+    margin-right: 5px;
+    margin-top: -4px;
+}
+
+#logout{
+    font-size: 6pt;
+}
+
+#nav{
+    border-bottom: solid 1px #4c76ff;
+}
+
+#sitemap{
+    margin-left: 19%;
+    font-size: 10pt;
+    font-family: 'Segoe';
+    padding: 15px;
+    color : #4c76ff;
+}
+
+.nilai input{
+    width: 30px;
+}
+
+#searchbar{
+    float: right;
+    margin-right: 40%;
+}
+
+#searchbar input{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 23px;
+    width: 120px;
+    -moz-transition: width 0.5s ease-out;
+    -webkit-transition: width 0.5s ease-out;
+    transition: width 0.5s ease-out;
+}
+
+#searchbar input:focus{
+    width: 200px;
+    -moz-transition: width 0.5s ease-out;
+    -webkit-transition: width 0.5s ease-out;
+    transition: width 0.5s ease-out;
+    border: solid 1px #4c76ff;
+}
+
+.imsearch{
+    position:absolute;
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 20px;
+}
+
+#mininav{
+    margin: auto;
+}
+
+.mininav{
+    width: 100%;
+}
+
+#main{
+    margin-top: 2%;
+    margin-left: -5px;
+    width: 102%;
+}
+
+#title{
+    float: left;
+    width: 100%;
+}
+
+#panel{
+    float: left;
+    margin-top: 20px;
+}
+
+#paneltitle{
+    padding: 10px;
+    width: 180px;
+    background-color: #4c76ff;
+    font-family: 'SegoeBold';
+    color: white;
+    text-transform: uppercase;
+}
+
+#menupanel{
+    width: 200px;
+    margin-top: 10px;
+}
+
+#listitem{
+    margin-top: -1px;
+    background-color: white;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeSB';
+    color: #4c76ff;
+    text-transform: uppercase;
+    height: 25px;
+    width:183px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#listitem:hover{
+    margin-top: -1px;
+    background-color: #4c76ff;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeSB';
+    text-transform: uppercase ;
+    height: 25px;
+    color: white;
+}
+
+#listitem:active{
+    margin-top: -1px;
+    background-color: whitesmoke;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeSB';
+    text-transform: uppercase ;
+    height: 25px;
+    color: #4c76ff;
+}
+
+#listitem-inactive{
+    margin-top: -1px;
+    background-color: whitesmoke;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeLight';
+    text-transform: uppercase ;
+    height: 25px;
+    color: #4c76ff;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#listitem-inactive:hover{
+    margin-top: -1px;
+    background-color: #4c76ff;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeSB';
+    text-transform: uppercase ;
+    height: 25px;
+    color: white;
+}
+
+#isipanel{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#isititle{
+    padding: 10px;
+    width: auto;
+    background-color: #4c76ff;
+    font-family: 'SegoeBold';
+    color: white;
+    text-transform: uppercase;
+    height: 18px;
+    float:left;
+    width: 739px;
+    position: relative;
+}
+
+#tambah{
+    width: 102px;
+    padding-left: 30px;
+    padding-top: 12px;
+    padding-right: 10px;
+    background-color: #4c76ff;
+    font-family: 'SegoeBold';
+    font-size: 7pt;
+    color: white;
+    text-transform: uppercase;
+    height: 26px;
+    position: absolute;
+    margin-left: 610px;
+    cursor:pointer;
+    cursor: hand;
+}
+
+#tambah:hover{
+    width: 100px;
+    padding-left: 30px;
+    padding-top: 12px;
+    padding-right: 18px;
+    background-color: white;
+    font-family: 'SegoeBold';
+    font-size: 7pt;
+    color: #4c76ff;
+    text-transform: uppercase;
+    height: 24px;
+    border: solid 1px #4c76ff;
+}
+
+.hapus{
+    width: 100px;
+    padding-left: 30px;
+    padding-top: 12px;
+    background-color: #ff4c4c;
+    font-family: 'SegoeBold';
+    font-size: 7pt;
+    color: white;
+    text-transform: uppercase;
+    height: 26px;
+    float: left;
+    display: none;
+}
+
+#list{
+    margin-right: -40px;
+    margin-top: 10px;
+    background-color: white;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeLight';
+    color: #4c76ff;
+    height: 25px;
+    width: auto;
+    float: left;
+}
+
+.siswa{
+    font-family: "SegoeBold";
+    font-size: 9pt;
+    text-transform: uppercase;
+}
+
+#listsiswa{
+    margin-top: 15px;
+}
+
+.baris0{
+    width: 100.5%;
+    margin-left: -10px;
+    padding: 5px;
+    background-color: #b1c3fe;
+    border: solid 1px white;
+    margin-top: -1px;
+    padding-right: 10px;
+}
+
+.baris0 td{
+    font-family: 'SegoeSB';
+    font-size: 9pt;
+}
+
+.baris1{
+    margin-top: -1px;
+    width: 100.5%;
+    margin-left: -10px;
+    padding: 5px;
+    padding-right: 10px;
+    background-color: #cdd6f5;
+    font-family: 'SegoeSB';
+    font-size: 9pt;
+    border: solid 1px white;
+}
+
+.baris1 td{
+    font-family: 'SegoeSB';
+    font-size: 9pt;
+}
+
+.smarrow{
+    background-image: url('images/cur.png');
+}
+
+.cur{
+    margin-top: -42px;
+    height: 42px;
+    width: 3px;
+    position: absolute;
+    float: left;   
+    margin-left: 197px;
+}
+
+#paging{
+    width: 100%;
+    float: right;
+    margin-bottom: 30px;
+}
+
+.paging{
+    float: right;
+    color: #4c76ff;
+    font-size: 9pt;
+    font-family: 'SegoeBold';
+}
+
+#detail{
+    margin-top: 10px;
+    background-color: white;
+    border: solid 1px #dcdcdc;
+    padding: 10px;
+    font-family: 'SegoeBold';
+    color: #4c76ff;
+    height: auto;
+    width: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+div #detail td{
+    font-size: 9pt;
+}
+
+#leftbio{
+    font-family: 'SegoeBold';
+    color: #4c76ff;
+    float: left;
+}
+
+.khs{
+    margin-top: -1px;
+    background-color: white;
+    border: solid 1px #dcdcdc;
+    padding: 10px;
+    font-family: 'Segoe';
+    color: #4c76ff;
+    height: auto;
+    width: auto;
+    max-width: 737px;
+    float: top;
+}
+
+.tabel-khs{
+    max-width: 737px;
+    min-width: 737px;
+    border-collapse: collapse;
+}
+
+.tabel-khs th{
+    border: solid 1px blue;
+    padding: 5px;
+    background-color: #4c76ff;
+    font-family: 'SegoeLight';
+    font-size: 10pt;
+    color: white;
+
+    text-transform: uppercase;
+}
+
+.tabel-khs td{
+    border: solid 1px blue;
+    padding: 5px;
+    font-family: 'Segoe';
+    font-size: 10pt;
+    text-align: center;
+}
+
+input{
+    font-family: 'Segoe';
+    font-size: 9pt;
+}
+
+select{
+    font-family: 'Segoe';
+    font-size: 9pt;
+}
+
+#cd{
+    text-align: center;
+}
+
+.detailkhs{
+    float: right;
+    background-color: red;
+
+}
+
+#result-khs{
+    margin-top: -1px;
+    background-color: whitesmoke;
+    border: solid 1px #dcdcdc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'SegoeLight';
+    height: auto;
+    color: #4c76ff;
+}
+
+/* start of the toggle */
+.onoffswitch {
+    position: relative; width: 57px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 0px;
+}
+
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    float: left; width: 50%; height: 20px; padding: 0; line-height: 16px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.onoffswitch-inner:before {
+    content: "BUKA";
+    padding-left: 5px;
+    background-color: #4C76FF; color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+    content: "TUTUP";
+    padding-right: 5px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    width: 14px; margin: 0px;
+    background: #171717;
+    position: absolute; top: 0; bottom: 0; right: 43px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+
+/* end of toggle */
+
+.tambahadmin{
+    margin-top: -1px;
+    background-color: white;
+    border: solid 1px #dcdcdc;
+    padding: 10px;
+    font-family: 'Segoe';
+    color: #4c76ff;
+    height: auto;
+    width: auto;
+    float: top;
+    width: auto; 
+    text-align: center;
+    background-color: whitesmoke; 
+    cursor:pointer; 
+    cursor:hand;
+}
+
+.tambahadmin:hover{
+    margin-top: -1px;
+    background-color: #97FE92;
+    border: solid 1px gray;
+    padding: 10px;
+    font-family: 'Segoe';
+    color: green;
+    height: auto;
+    width: auto;
+    float: top;
+    width: auto; 
+    cursor:pointer; 
+    cursor:hand;
+}
+
+#grid{
+    padding: 10px;
+    background-color: whitesmoke;
+    font-family: 'SegoeBold';
+    text-transform: uppercase;
+    float:left;
+    position: relative;
+    margin-top: 10px; 
+    margin-right: 10px; 
+    width: 150px; 
+    height: 150px; 
+    background-color: #EEEEEE; 
+    color: #4c76ff; 
+    border: solid 1px #dcdcdc;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#grid:hover{
+    padding: 10px;
+    background-color: whitesmoke;
+    font-family: 'SegoeBold';
+    text-transform: uppercase;
+    float:left;
+    position: relative;
+    margin-top: 10px; 
+    margin-right: 10px; 
+    width: 150px; 
+    height: 150px; 
+    background-color: #4C76FF; 
+    color: white; 
+    border: solid 1px blue;
+}
+
