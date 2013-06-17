@@ -7,13 +7,6 @@ class Siswa extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->is_login();
-    }
-
-    private function is_login(){
-        if($this->session->userdata('admin')===FALSE){
-            redirect('loguser');
-        }
     }
 
     public function index() {
@@ -31,7 +24,7 @@ class Siswa extends CI_Controller {
         if($result->num_rows()>0){
             $data['result'] = $result->result();
         }
-        $this->load->view('siswa/siswa_view', $data);
+        $this->load->view('siswa_view', $data);
     }
 
     public function lihat($nis='') {
@@ -44,7 +37,7 @@ class Siswa extends CI_Controller {
         }else{
             redirect('siswa');
         }
-        $this->load->view('siswa/siswa_lihat_view', $data);
+        $this->load->view('siswa_lihat_view', $data);
     }
 
     public function ubah() {
@@ -79,7 +72,7 @@ class Siswa extends CI_Controller {
                 redirect('siswa/lihat/'.$_POST['nis']);
             }
         }
-        $this->load->view('siswa/siswa_ubah_view', $data);
+        $this->load->view('siswa_ubah_view', $data);
     }
 
     public function tambah() {
@@ -114,7 +107,7 @@ class Siswa extends CI_Controller {
                 redirect('siswa/lihat/'.$_POST['nis']);
             }
         }
-        $this->load->view('siswa/siswa_tambah_view', $data);
+        $this->load->view('siswa_tambah_view', $data);
     }
 
 }

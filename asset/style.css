@@ -302,7 +302,7 @@ a.detail{
 }
 
 #main{
-    margin-top: 1%;
+    margin-top: 2%;
     margin-left: -5px;
     width: 102%;
 }
@@ -314,6 +314,7 @@ a.detail{
 
 #panel{
     float: left;
+    margin-top: 20px;
 }
 
 #paneltitle{
@@ -402,8 +403,8 @@ a.detail{
 
 #isipanel{
     float: left;
+    margin-top: 20px;
     margin-left: 20px;
-    width: 759px;
 }
 
 #isititle{
@@ -475,15 +476,18 @@ a.detail{
 }
 
 #list{
-    /*margin-right: -40px;*/
+    margin-right: -40px;
     margin-top: 10px;
     background-color: white;
     border: solid 1px #dcdcdc;
-    padding: 0px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
     font-family: 'SegoeLight';
     color: #4c76ff;
     height: 25px;
-    width: 100%;
+    width: auto;
     float: left;
 }
 
@@ -491,23 +495,40 @@ a.detail{
     font-family: "SegoeBold";
     font-size: 9pt;
     text-transform: uppercase;
-    width:100%;
 }
 
 #listsiswa{
-    /*margin-right: -40px;*/
-    margin-top: 5px;
-    background-color: #b1c3fe;
-    padding: 0px;
-    border: solid 1px #b1c3ff;
-    padding: 0px;
-    width: 100%;
-    float: left;
+    margin-top: 15px;
 }
 
-.baris{
+.baris0{
+    width: 100.5%;
+    margin-left: -10px;
+    padding: 5px;
     background-color: #b1c3fe;
-    width:100%;
+    border: solid 1px white;
+    margin-top: -1px;
+    padding-right: 10px;
+}
+
+.baris0 td{
+    font-family: 'SegoeSB';
+    font-size: 9pt;
+}
+
+.baris1{
+    margin-top: -1px;
+    width: 100.5%;
+    margin-left: -10px;
+    padding: 5px;
+    padding-right: 10px;
+    background-color: #cdd6f5;
+    font-family: 'SegoeSB';
+    font-size: 9pt;
+    border: solid 1px white;
+}
+
+.baris1 td{
     font-family: 'SegoeSB';
     font-size: 9pt;
 }
