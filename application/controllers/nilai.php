@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Pengaturan extends CI_Controller {
+class Nilai extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -17,8 +17,8 @@ class Pengaturan extends CI_Controller {
     }
 
     public function index() {
-        $data['navbar'] = $data['title'] = 'pengaturan';
-        $this->load->view('pengaturan/pengaturan_view', $data);
+        $data['navbar'] = $data['title'] = 'nilai';
+        $this->load->view('nilai/nilai_view', $data);
     }
 
 }

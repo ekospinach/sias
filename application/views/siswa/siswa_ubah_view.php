@@ -3,7 +3,7 @@
                     <div id="isititle">
                         <div id="title">Tambah Siswa</div>
                     </div>
-                    <div id="tambah" onclick="location.href='<?=base_url('siswa')?>';"><= Kembali</div>
+                    <div id="tambah" onclick="location.href='<?=base_url('siswa/lihat/'.set_value('nis'))?>';"><= Kembali</div>
                     <div id="isi">
                         <div id="leftbio">
                             <table >
@@ -11,8 +11,8 @@
                                     <td>
                                         <div id="detail">
                                             <img width="194px" height="259px" src="<?php
-                                            if(!empty($result->foto)){
-                                                echo base_url('asset/images/foto/'.$result->foto);
+                                            if(!empty($foto)){
+                                                echo base_url('asset/images/foto/'.$foto);
                                             }else{
                                                 echo base_url('asset/images/foto/claudio.png');
                                             }
@@ -35,29 +35,7 @@
                         <div id="detail">
                             <?php echo form_open();?>
                             <table width="500">
-                                <tr>
-                                    <td width="200" height="30"> Nomor Induk Siswa</td>
-                                    <td>:</td>
-                                    <td width="300" height="30"> 
-                                        <input type='text' style='width: 100%;' name='nis' value="<?php echo set_value('nis'); ?>">
-                                        <?php echo form_error('nis'); ?>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="200" height="30"> Password</td>
-                                    <td>:</td>
-                                    <td width="300" height="30"> 
-                                        <input type='password' style='width: 100%;' name='pass' value="<?php echo set_value('pass'); ?>">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="200" height="30"> Konfirmasi Password</td>
-                                    <td>:</td>
-                                    <td width="300" height="30"> 
-                                        <input type='password' style='width: 100%;' name='passconf'>
-                                        <?php echo form_error('pass'); ?>
-                                    </td>
-                                </tr>
+                                <input type="hidden" name="nis" value="<?php echo set_value('nis'); ?>">
                                 <tr>
                                     <td width="200" height="30"> Nama Siswa</td>
                                     <td>:</td>
@@ -77,7 +55,7 @@
                                             $('#datepicker').datepicker({  
                                               changeMonth: true,  
                                               changeYear: true,
-                                              yearRange: 'c-15:c-10',
+                                              yearRange: '<?=(date('Y')-20)?>:<?=(date('Y')-5)?>',
                                               dateFormat: 'yy-mm-dd'
                                             });  
                                         });  
@@ -115,7 +93,9 @@
                                 </tr><tr>
                                     <td width="200" height="30"> Nomor Handphone</td>
                                     <td>:</td>
-                                    <td width="300" height="30"> <input type='text' style='width: 100%;' name='no_hp' value="<?php echo set_value('no_hp'); ?>"></td>
+                                    <td width="300" height="30"> <input type='text' style='width: 100%;' name='no_hp' value="<?php echo set_value('no_hp'); ?>">
+                                        <?php echo form_error('no_hp'); ?>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td width="200"  height="30"> Nama Ayah</td>
@@ -161,7 +141,7 @@
                                 <tr>
                                     <td></td>
                                     <td></td>
-                                    <td align='right' ><input type="submit" name="tambah" value="Tambah Siswa"></td>
+                                    <td align='right' ><input type="submit" name="ubahfix" value="Ubah data"></td>
                                 </tr>
                                 <?php echo form_close();?>
                             </table>
