@@ -1,0 +1,5 @@
+SELECT paket.kode_paket, paket.kelas, mapel.id_mapel, mapel.nama_mapel, ruang.id_ruang, ruang.nama_ruang, guru.id_guru, guru.nama_guru
+FROM paket
+LEFT JOIN mapel ON mapel.id_mapel=paket.id_mapel
+LEFT JOIN ruang ON ruang.id_ruang=paket.id_ruang
+LEFT JOIN guru ON guru.id_guru=paket.id_guru

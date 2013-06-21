@@ -302,7 +302,7 @@ a.detail{
 }
 
 #main{
-    margin-top: 2%;
+    margin-top: 1%;
     margin-left: -5px;
     width: 102%;
 }
@@ -314,7 +314,6 @@ a.detail{
 
 #panel{
     float: left;
-    margin-top: 20px;
 }
 
 #paneltitle{
@@ -403,70 +402,68 @@ a.detail{
 
 #isipanel{
     float: left;
-    margin-top: 20px;
     margin-left: 20px;
+    width: 759px;
 }
 
 #isititle{
-    padding: 10px;
-    width: auto;
-    background-color: #4c76ff;
+    padding : 10px;
+    height: 20px;
+    width: 740px;
+    background-color: rgb(76, 118, 255);
     font-family: 'SegoeBold';
     color: white;
     text-transform: uppercase;
-    height: 18px;
+    margin-bottom: 0;
+}
+
+#isi{
+    width: auto;
     float:left;
-    width: 739px;
-    position: relative;
+    width: 100%;
+    /*position: relative;*/
 }
 
 #tambah{
-    width: 106px;
-    padding-left: 30px;
-    padding-top: 12px;
-    padding-right: 10px;
-    background-color: #4c76ff;
+    padding : 10px;
+    width: 130px;
+    background-color: rgb(76, 118, 255);
     font-family: 'SegoeBold';
-    font-size: 7pt;
     color: white;
     text-transform: uppercase;
-    height: 26px;
     position: absolute;
-    margin-left: 610px;
-    cursor:pointer;
+    margin-top: -40px;
+    margin-left: 600px;
+    border: none;
+    cursor: pointer;
     cursor: hand;
 }
 
 #tambah:hover{
-    width: 100px;
-    padding-left: 30px;
-    padding-top: 12px;
-    padding-right: 18px;
+    padding : 10px;
+    width: 130px;
     background-color: white;
     font-family: 'SegoeBold';
-    font-size: 7pt;
-    color: #4c76ff;
+    color: #4C76FF;
     text-transform: uppercase;
-    height: 24px;
-    border: solid 1px #4c76ff;
+    position: absolute;
+    margin-top: -39px;
+    margin-left: 610px;
 }
 
 .hapus{
-    width: 120px;
-    padding-left: 5px;
-    padding-top: 0px;
-    padding-right: 10px;
+    padding : 10px;
+    width: 130px;
+    height: 39px;
     background-color: #ff4c4c;
     font-family: 'SegoeBold';
-    font-size: 7pt;
     color: white;
     text-transform: uppercase;
-    height: 38px;
     position: absolute;
-    margin-left: 639px;
-    border:  0px;
-    cursor:pointer;
-    display: none;
+    margin-top: -39px;
+    margin-left: 630px;
+    border: none;
+    display:none;
 }
 
 .hapus:hover{
@@ -476,18 +473,15 @@ a.detail{
 }
 
 #list{
-    margin-right: -40px;
+    /*margin-right: -40px;*/
     margin-top: 10px;
     background-color: white;
     border: solid 1px #dcdcdc;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding: 0px;
     font-family: 'SegoeLight';
     color: #4c76ff;
     height: 25px;
-    width: auto;
+    width: 100%;
     float: left;
 }
 
@@ -495,42 +489,46 @@ a.detail{
     font-family: "SegoeBold";
     font-size: 9pt;
     text-transform: uppercase;
+    width:100%;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 #listsiswa{
-    margin-top: 15px;
-}
-
-.baris0{
-    width: 100.5%;
-    margin-left: -10px;
-    padding: 5px;
+    /*margin-right: -40px;*/
+    margin-top: 5px;
     background-color: #b1c3fe;
-    border: solid 1px white;
-    margin-top: -1px;
-    padding-right: 10px;
+    padding: 0px;
+    border: solid 1px #b1c3ff;
+    padding: 0px;
+    width: 100%;
+    float: left;
 }
 
-.baris0 td{
+.baris{
+    background-color: #b1c3fe;
     font-family: 'SegoeSB';
     font-size: 9pt;
+    max-width: 100%;
+    min-width: 100%;
+    border-collapse: collapse;
 }
 
-.baris1{
-    margin-top: -1px;
-    width: 100.5%;
-    margin-left: -10px;
-    padding: 5px;
-    padding-right: 10px;
-    background-color: #cdd6f5;
-    font-family: 'SegoeSB';
+.baris th{
+    font-family: "SegoeSB";
     font-size: 9pt;
-    border: solid 1px white;
+    font-style: normal;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: rgb(76, 118, 255);
 }
 
-.baris1 td{
-    font-family: 'SegoeSB';
-    font-size: 9pt;
+.baris tr:hover td{
+    background-color: #e0e0ff;
+}
+
+.baris tr:active td{
+    background-color: #ffffff;
 }
 
 .smarrow{
@@ -618,6 +616,15 @@ div #detail td{
     font-family: 'Segoe';
     font-size: 10pt;
     text-align: center;
+    background-color: #ffffff;
+}
+
+.tabel-khs tr:hover td{
+    background-color: #e0e0ff;
+}
+
+.tabel-khs tr:active td{
+    background-color: #e0ffff;
 }
 
 input{

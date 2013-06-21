@@ -7,6 +7,13 @@ class Siswa extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->is_login();
+    }
+
+    private function is_login(){
+        if($this->session->userdata('admin')===FALSE){
+            redirect('loguser');
+        }
     }
 
     public function index() {
@@ -17,14 +24,14 @@ class Siswa extends CI_Controller {
             }
         }
         if(isset($_POST['cari'])){
-            $result = $this->db->query("SELECT id, nis, nama, jalur FROM user WHERE nis LIKE '%".$_POST['cari']."%' OR nama LIKE '%".$_POST['cari']."%'");
+            $result = $this->db->query("SELECT id, nis, nama, jalur FROM user WHERE nis LIKE '%".$_POST['cari']."%' OR nama LIKE '%".$_POST['cari']."%' ORDER BY nis");
         }else{
-            $result = $this->db->query('SELECT id, nis, nama, jalur FROM user');
+            $result = $this->db->query('SELECT id, nis, nama, jalur FROM user ORDER BY nis');
         }
         if($result->num_rows()>0){
             $data['result'] = $result->result();
         }
-        $this->load->view('siswa_view', $data);
+        $this->load->view('siswa/siswa_view', $data);
     }
 
     public function lihat($nis='') {
@@ -37,7 +44,7 @@ class Siswa extends CI_Controller {
         }else{
             redirect('siswa');
         }
-        $this->load->view('siswa_lihat_view', $data);
+        $this->load->view('siswa/siswa_lihat_view', $data);
     }
 
     public function ubah() {
@@ -45,6 +52,20 @@ class Siswa extends CI_Controller {
         $data['title2'] = 'ubah';
         if(!isset($_POST['nis']))redirect('siswa');
         if(isset($_POST['foto']))$data['foto']=$_POST['foto'];
+        if(isset($_POST['uplo'])){
+            $config['upload_path'] = 'asset/images/foto';
+            $config['allowed_types'] = 'gif|jpg|png|bmp|jpeg';
+            $config['max_size'] = '2000';
+            $config['file_name'] = $_POST['nis'];
+            $this->load->library('upload', $config);
+            if(! $this->upload->do_upload('fotof')){
+                $foto = '';
+            }else{
+                $fotoarray = $this->upload->data();
+                $foto = $fotoarray['file_name'];
+            }
+            $this->db->query("UPDATE user SET foto='".$foto."' WHERE nis='".$_POST['nis']."'");
+        }
         $this->form_validation->set_rules('nis', 'Nis', 'required');
         $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('tempat', 'Tempat', 'callback_username_check');
@@ -72,7 +93,7 @@ class Siswa extends CI_Controller {
                 redirect('siswa/lihat/'.$_POST['nis']);
             }
         }
-        $this->load->view('siswa_ubah_view', $data);
+        $this->load->view('siswa/siswa_ubah_view', $data);
     }
 
     public function tambah() {
@@ -100,14 +121,25 @@ class Siswa extends CI_Controller {
         $this->form_validation->set_error_delimiters('<div style="color:red">', '</div>');
         if($this->form_validation->run()!==FALSE){
             if(isset($_POST['tambah'])){
+                $config['upload_path'] = 'asset/images/foto';
+                $config['allowed_types'] = 'gif|jpg|png|bmp|jpeg';
+                $config['max_size'] = '2000';
+                $config['file_name'] = $_POST['nis'];
+                $this->load->library('upload', $config);
+                if(! $this->upload->do_upload('fotof')){
+                    $foto = '';
+                }else{
+                    $fotoarray = $this->upload->data();
+                    $foto = $fotoarray['file_name'];
+                }
                 $this->db->query("INSERT INTO user
                     (`id`, `nis`, `pass`, `nama`, `tempat`, `tanggal`, `alamat`, `agama`, `jenis_kelamin`, `goldar`, `no_hp`, `nama_ayah`, `hp_ayah`, `nama_ibu`, `hp_ibu`, `nama_wali`, `hp_wali`, `alamat_ortu`, `alamat_wali`, `foto`, `angkatan`, `bahasa`, `jalur`) 
                     VALUES (NULL, '".$_POST['nis']."', '".$_POST['pass']."', '".$_POST['nama']."', '".$_POST['tempat']."', '".$_POST['tanggal']."', '".$_POST['alamat']."', '".$_POST['agama']."', '".$_POST['jenis_kelamin']."', '".$_POST['goldar']."', '".$_POST['no_hp']."', 
-                    '".$_POST['nama_ayah']."', '".$_POST['hp_ayah']."', '".$_POST['nama_ibu']."', '".$_POST['hp_ibu']."', '".$_POST['nama_wali']."', '".$_POST['hp_wali']."', '".$_POST['alamat_ortu']."', '".$_POST['alamat_wali']."', NULL, NULL, '', '".$_POST['jalur']."');");
+                    '".$_POST['nama_ayah']."', '".$_POST['hp_ayah']."', '".$_POST['nama_ibu']."', '".$_POST['hp_ibu']."', '".$_POST['nama_wali']."', '".$_POST['hp_wali']."', '".$_POST['alamat_ortu']."', '".$_POST['alamat_wali']."', '".$foto."', NULL, '', '".$_POST['jalur']."');");
                 redirect('siswa/lihat/'.$_POST['nis']);
             }
         }
-        $this->load->view('siswa_tambah_view', $data);
+        $this->load->view('siswa/siswa_tambah_view', $data);
     }
 
 }

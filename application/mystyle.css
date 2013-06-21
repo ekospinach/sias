@@ -1,0 +1,257 @@
+body{
+	font-family: "Arial";
+	font-size: 10pt;
+	background: #2989d8; /* Old browsers */
+}
+
+a{
+	text-decoration: none;
+}
+
+
+ul{
+	list-style-type: none;
+}
+
+#user{
+	background-color: #D4F7FF;
+}
+
+#wrapper{
+	width: 960px;
+	margin: auto;
+	border: black 1px;	
+}
+
+#text{
+	font-family: "Arial";
+	font-size: 9pt;
+
+}
+
+a{
+	color: black;
+}
+
+.inputbox{
+	height: 40px;
+	width: 250px;
+	padding: 5px;
+	border-radius: 10px;
+	float: right;
+	margin: 27px;
+	margin-left: 10px;
+	margin-right: 0px;
+	margin-top: 10px;
+	border: solid 1px black;
+}
+
+.submit{
+	-webkit-transition:0.2s;
+	height: 44px;
+	width: 100px;
+	padding: 14px;
+	border-radius: 10px;
+	float: top;
+	margin: auto;
+	background-color: #378fb9;
+	color: white;
+	float: right;
+	border: 0;
+	margin-right: 120px;
+}
+
+.submit:hover{
+	-webkit-transition:0.2s;
+	background-color: blue;
+}
+
+
+
+#loginbox{
+	float: top;
+	width: 342px;
+	height: 300px;
+	margin: auto;
+	border-radius: 10px;
+	background-color: white;
+	padding: 50px;
+}
+
+#header{
+	height: 150px;
+	width: 960px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+#titlebox{
+	text-align: right;
+	color: blue;
+	height: 30px;
+	margin-bottom: 30px;
+	padding: none;
+	font-size: 13pt;
+	border-bottom: solid 1px blue;		
+}
+
+.logo{
+	width: 430px;
+	height: 100px;
+	margin-left: 28.5%;
+	margin-top: 5%;
+}
+
+#logoteks{
+	float: left;
+	font-size: 20pt;
+	color: white;
+}
+
+/* userarea */
+
+#headeruser{
+	margin-left: 60px;
+	margin-top: 40px;
+}
+
+img.user{
+	width: 800px;
+}
+
+#leftnav{
+	width: 230px;
+	float: left;
+	margin-left: 60px;	
+}
+
+li.navleft{
+	width: 215px;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+	font-size: 15pt;
+	text-align: right;
+	background-color: grey;
+}
+
+li.navleft-cur{
+	width: 215px;
+	background-color: white;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+	-webkit-box-shadow: 0px 1px 10px black;
+	border-bottom: solid 4px #414141;
+	font-size: 15pt;
+	text-align: right;
+}
+
+li.navleft:hover{
+	width: 215px;
+	background-color: white;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+	border-bottom: solid 4px gray;
+	-webkit-box-shadow: 0px 1px 10px black;
+}
+
+li.navleft:active{
+	width: 215px;
+	background-color: gray;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+}
+
+li.navleft-logout{
+	width: 215px;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+	font-size: 15pt;
+	text-align: right;
+	background-color: grey;
+	margin-top: 200px;
+}
+
+li.navleft-logout{
+	width: 215px;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+	font-size: 15pt;
+	text-align: right;
+	background-color: grey;
+	margin-top: 200px;
+}
+
+li.navleft-logout:hover{
+	width: 215px;
+	padding: 5px;
+	padding-top: 20px;
+	padding-right: 10px;
+	margin-left: -40px;
+	height: 40px;
+	font-size: 15pt;
+	text-align: right;
+	background-color: white;
+	color:red;
+	margin-top: 200px;
+}
+
+
+
+#main{
+	float: left;
+	width: 55%;
+	margin-top: 13px;
+	background-color: white;
+	padding: 20px;
+	padding-bottom: 50px;
+	-webkit-box-shadow: 0px 1px 10px black;
+}
+
+table{
+	font-size: 10pt;
+}
+
+td{
+	overflow: hidden;
+}
+
+.avatar{
+	width: 130px;
+	height: 180px;
+}
+
+li.akademik{
+	float: left;
+	margin: 10px;
+}
+
+.icon{
+	padding: 4px;
+}
+
+.jadwal{
+	border: solid 1px black;
+	border-collapse:collapse;
+}
+
+#jadwal{
+	
+}

@@ -36,7 +36,7 @@ class Loguser extends CI_Controller {
         redirect('', 'refresh');
     }
 }
-//$msg = 'Sistem Keamanan SIAS';
+//$msg = 'Keamanan SIAS';
 //$key = '4j6h3n09c87';
 //$this->load->library('encrypt');
 //$data['encrypt'] = $this->encrypt->encode($msg, $key);
